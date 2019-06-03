@@ -184,7 +184,7 @@ class MavenMvnSettings implements MavenSettings {
             org.eclipse.aether.repository.RepositoryPolicy snapshots
                     = new org.eclipse.aether.repository.RepositoryPolicy(sp.isEnabled(),
                             sp.getUpdatePolicy(), sp.getChecksumPolicy());
-            builder.setReleasePolicy(snapshots);
+            builder.setSnapshotPolicy(snapshots);
         }
         for (Server server : settings.getServers()) {
             if (server.getId().equals(id)) {
